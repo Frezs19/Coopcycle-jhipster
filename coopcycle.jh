@@ -7,7 +7,7 @@ entity User {
 }
 
 entity Magasin {
-  nom String required minlength(3)
+  nom String required minlength(3) unique
   adresse String required minlength(10)
 }
 
@@ -22,9 +22,18 @@ entity Produit {
   prix Integer required
 }
 
+entity Panier {
+  nom String required unique minlength(3)
+}
+
 relationship ManyToOne {
   Magasin{cooperative(nom)} to Cooperative
   Produit{magasin(nom)} to Magasin
+  Panier{magasin(nom)} to Magasin
+}
+
+relationship ManyToMany {
+  Panier{produit(nom)} to Produit{panier(nom)}
 }
 
 dto * with mapstruct
