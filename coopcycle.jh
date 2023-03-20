@@ -1,0 +1,31 @@
+entity User {
+  prenom String required minlength(3)
+  nom String required minlength(2)
+  adresse String required minlength(10)
+  mdp String required minlength(5) maxlength(10)
+  email String required unique
+}
+
+entity Magasin {
+  nom String required minlength(3)
+  adresse String required minlength(10)
+}
+
+entity Cooperative {
+  nom String required minlength(3) unique
+  zone String required minlength(3)
+}
+
+entity Produit {
+  nom String required unique minlength(3)
+  description String required minlength(10)
+  prix Integer required
+}
+
+relationship ManyToOne {
+  Magasin{cooperative(nom)} to Cooperative
+  Produit{magasin(nom)} to Magasin
+}
+
+dto * with mapstruct
+service * with serviceImpl

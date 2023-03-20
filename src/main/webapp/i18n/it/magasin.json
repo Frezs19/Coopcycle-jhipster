@@ -1,0 +1,26 @@
+{
+  "blogApp": {
+    "magasin": {
+      "home": {
+        "title": "Magasins",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Magasin",
+        "createOrEditLabel": "Genera o modifica un Magasin",
+        "notFound": "No Magasins found"
+      },
+      "created": "&Egrave; stato generato un nuovo Magasin con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Magasin identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Magasin con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Magasin {{ id }}?"
+      },
+      "detail": {
+        "title": "Magasin"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "adresse": "Adresse",
+      "cooperative": "Cooperative"
+    }
+  }
+}
